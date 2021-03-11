@@ -25,8 +25,8 @@ function compile_node() {
   echo -e "Prepare to download $COIN_NAME files"
   cd $TMP_FOLDER
   wget -q $COIN_TGZ
-  unzip -x $COIN_ZIP 2>&1 >/dev/null
-  cp stipend-ubuntu-16.04-node/usr/local/bin/stip* $COIN_PATH
+  tar -x $COIN_ZIP 2>&1 >/dev/null
+  cp stipend-3.4.0.1-x86_64-linux-gnu/usr/local/bin/stip* $COIN_PATH
   clear
   cd - >/dev/null 2>&1
   rm -rf $TMP_FOLDER >/dev/null 2>&1
